@@ -1,0 +1,14 @@
+<% include partials/header %>
+
+<h1>Home Page</h1>
+<a href="/vote" class="btn btn-lg btn-success">Vote</a>
+<a href="/track" class="btn btn-lg btn-success">Track your Vote Here</a>
+<h1>Check your eligibility for online voting.</h1>
+<form method="POST" action="/check">
+    <div class="form-group" >
+        <input type="number" class="form-control"  name ="VoterId"  placeholder="VoterId" min="1231" step="1">
+    </div>  
+    <button type="submit" class="btn btn-success btn-block">Log In</button>
+</form>
+
+<% include partials/footer %>

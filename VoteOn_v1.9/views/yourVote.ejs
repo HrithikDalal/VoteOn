@@ -1,0 +1,15 @@
+<% include partials/header %>
+
+<H1 class ="text-center">Your Vote</H1>
+<div class="card col-md-4 col-sm-4 col-lg-4" style= "width : 30%; margin: 30px auto;">
+    <img class="card-img-top" src="<%=candidate.avatar%>" alt="Card image cap">
+      <div class="card-body text-center">
+        <h4 class="card-title text-primary"><u><%=candidate.firstName%> <%=candidate.lastName%></u></h4>
+        <button type="button" class="btn btn-outline-dark disabled"><%=candidate.partyName%></button>
+        <p class="card-text">You voted for this guy.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 1 month ago</small>
+      </div>
+  </div>
+<% include partials/footer %>

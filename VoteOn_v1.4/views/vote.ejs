@@ -1,0 +1,14 @@
+<% include partials/header %>
+
+<h1>Voting Page</h1>
+<form action="/vote" method="POST">
+  <div class="form-group" >
+    <label for="Candidate">Candidate Number</label>
+     <select class="form-control" name="cnumber">
+      <option>1</option>
+      <option>2</option>
+    </select>
+    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+</form>
+
+<% include partials/footer %>

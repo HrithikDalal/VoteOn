@@ -1,0 +1,21 @@
+<% include partials/header %>
+
+<div class ="landing row">
+	
+    <div class="landing-header col-md-6 col-lg-6 col-sm-6" >
+ 		<h1>Welcome to VoteOn!</h1>
+ 		<h3><strong><em>Every Vote Counts.</em></strong></h3>
+		<a href="/home" class="btn btn-lg btn-success">Let's Vote</a>
+	</div>
+	<div class="landing-header col-md-6 col-lg-6 col-sm-6" >
+	    <h1>Check your eligibility for online voting.</h1>
+	    <form method="POST" action="/check">
+	        <div class="form-group" >
+	            <input type="number" class="form-control"  name ="VoterId"  placeholder="VoterId" min="1231" step="1">
+	       </div>
+	       <button type="submit" class="btn btn-success btn-lg">Submit</button>
+	       </form>
+	</div>
+</div>
+
+<% include partials/footer %>

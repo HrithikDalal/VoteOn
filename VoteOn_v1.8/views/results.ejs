@@ -1,0 +1,7 @@
+<% include partials/header %>
+
+<%candidates.forEach(function(candidate){%>
+<h3>Number of votes in favour of <%=candidate.firstName%> <%=candidate.lastName%> are - <%=voteChain.getBalanceOfAddress(candidate.publicAddress)%></h3>
+  <%});%>
+  
+<% include partials/footer %>

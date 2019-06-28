@@ -1,0 +1,28 @@
+<% include partials/header %>
+
+<div class="jumbotron ">
+  <div class="container">
+    <h1 class="display-4"><i class="fas fa-vote-yea"></i> Welcome to VoteOn!</h1>
+    <p class="lead">Secure online voting system.</p>
+  </div>
+</div>
+
+<h2>Live Elections</h2>
+<div class="card">
+  <div class="card-body">
+    <h3>Lok Sabha Elections 2019</h3>
+    <%if(!currentUser) {%>
+<a class="btn btn-primary float-right" href="/Login"><i class="fas fa-sign-in-alt"></i> Log In</a>
+<%} else{%>
+<a href="/vote" class="btn btn-lg btn-success float-right">Vote</a>
+<%if(!currentUser.vote) {%>
+<form action="/track" method="POST">
+<button type="submit" class="btn btn-lg btn-primary float-right">Check your Vote Here</button>
+</form>
+<%}%>
+ <%}%>
+  </div>
+</div>
+  
+
+<% include partials/footer %>

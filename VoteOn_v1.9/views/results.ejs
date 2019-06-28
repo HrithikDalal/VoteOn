@@ -1,0 +1,19 @@
+<% include partials/header %>
+<h3>Results</h3>
+<div class="row">
+  <%candidates.forEach(function(candidate){%>
+ <div class="card col-md-4 col-sm-4 col-lg-4">
+    <img class="card-img-top" src="<%=candidate.avatar%>" alt="Card image cap">
+      <div class="card-body text-center">
+        <h4 class="card-title text-primary btn btn-outline-primary"><%=candidate.firstName%> <%=candidate.lastName%></h4><br>
+        <button type="button" class="badge badge-pill badge-primary
+        "><%=candidate.partyName%></button>
+        <p class="card-text">Number of votes in favour of <%=candidate.firstName%> <%=candidate.lastName%> are - <h1><%=voteChain.getBalanceOfAddress(candidate.publicAddress)%></h1></p>
+      </div>
+    </div>
+<%});%>  
+    
+</div>
+
+  
+<% include partials/footer %>

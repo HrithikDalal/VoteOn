@@ -1,0 +1,15 @@
+<% include partials/header %>
+
+<h1>Home Page</h1>
+<%if(!currentUser) {%>
+Secure online voting system
+Please Login to Continue.<a class="nav-link" href="/Login"><i class="fas fa-sign-in-alt"></i> Log In</a>
+<%} else{%>
+<a href="/vote" class="btn btn-lg btn-success">Vote</a>
+<%if(!currentUser.vote) {%>
+<form action="/track" method="POST">
+<button type="submit" class="btn btn-primary">Track your Vote Here</button>
+</form>
+<%}%>
+ <%}%>
+<% include partials/footer %>

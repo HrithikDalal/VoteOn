@@ -1,0 +1,12 @@
+<% include partials/header %>
+
+<h1>Verify Your Vote</h1>
+<form action="/track" method="POST">
+    <div class="form-group" >
+    <label for="name">Enter Your Key Here</label>
+    <input type="text" class="form-control"  name ="key"  placeholder="Enter key">
+  </div>
+    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+</form>
+
+<% include partials/footer %>

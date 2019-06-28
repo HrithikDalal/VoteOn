@@ -1,0 +1,15 @@
+<% include partials/header %>
+
+<h1>Voting Page</h1>
+<form action="/vote" method="POST">
+    <div class="form-group" >
+    <label for="name">VoterName</label>
+    <input type="text" class="form-control"  name ="vname"  placeholder="Enter your name" required>
+  </div>
+  <div class="form-group" >
+    <label for="cost">Candidate Number</label>
+    <input type="number" class="form-control"  name ="cnumber"  placeholder="Enter Candidate Number" min="1" max="5" step="1" required>
+  </div>  
+    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+</form>
+<% include partials/footer %>
